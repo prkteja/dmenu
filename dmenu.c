@@ -498,8 +498,17 @@ insert:
 			cursor = nextrune(+1);
 			break;
 		}
-		if (lines > 0)
-			return;
+		// in list mode, select option with right key
+		if (lines > 0) {
+			puts((sel && !(ev->state & ShiftMask)) ? sel->text : text);
+			if (!(ev->state & ControlMask)) {
+				cleanup();
+				exit(0);
+			}
+			if (sel)
+				sel->out = 1;
+			break;
+		}
 		/* fallthrough */
 	case XK_Down:
 		if (sel && sel->right && (sel = sel->right) == next) {

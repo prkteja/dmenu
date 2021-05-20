@@ -756,6 +756,8 @@ setup(void)
 	/* calculate menu geometry */
 	bh = drw->fonts->h + 2;
 	lines = MAX(lines, 0);
+	if (lines > 0)
+		ch.res_name = "dmenu_list";
 	mh = (lines + 1) * bh;
 #ifdef XINERAMA
 	i = 0;

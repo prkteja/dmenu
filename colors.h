@@ -58,6 +58,7 @@ static const char *colors[SchemeLast][2] = {
 
 /* Dracula */
   [SchemeNorm] = { drac_fg, drac_bg3 },
+  // [SchemeSel] = { drac_bg3, drac_sel2 },
   [SchemeSel] = { drac_sel2, drac_bg },
 
 /* Gruvbox dark */

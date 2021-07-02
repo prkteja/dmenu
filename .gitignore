@@ -1,7 +1,3 @@
 *.o
-*.1
 *.diff
 dmenu
-dmenu_run
-dmenu_path
-stest

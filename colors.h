@@ -58,7 +58,6 @@ static const char *colors[SchemeLast][2] = {
 
 /* Dracula */
   [SchemeNorm] = { drac_fg, drac_bg3 },
-  // [SchemeSel] = { drac_bg3, drac_sel2 },
   [SchemeSel] = { drac_sel2, drac_bg },
 
 /* Gruvbox dark */
@@ -67,5 +66,5 @@ static const char *colors[SchemeLast][2] = {
 
 /* Material Palenight */
 // [SchemeNorm] = { pn_fg,  pn_bg   },
-// [SchemeSel] =  { pn_bg,  pn_green  },
+// [SchemeSel] =  { pn_blue,  pn_bg  },
 };

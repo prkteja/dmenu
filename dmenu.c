@@ -176,8 +176,13 @@ drawmenu(void)
 	recalculatenumbers();
 	if (lines > 0) {
 		/* draw vertical list */
-		for (item = curr; item != next; item = item->right)
-			drawitem(item, 0, y += bh, mw - x);
+		int curr_lines = 1;
+		for (item = curr; item != next; item = item->right) {
+			drawitem(item, 0, y += bh, mw);
+			curr_lines++;
+		}
+		/* drw_resize(drw, mw, curr_lines*bh); */
+		printf("%d\n", XResizeWindow(dpy, win, mw, curr_lines*bh));
 	} else if (matches) {
 		/* draw horizontal list */
 		x += inputw;

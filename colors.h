@@ -29,6 +29,8 @@ static const char drac_sel3[]		= "#383a59";
 static const char drac_fg[] 		= "#f8f8f2";
 static const char drac_green[]		= "#50fa7b";
 static const char drac_cyan[]		= "#8be9fd";
+static const char drac_pink[]		= "#ff79c6";
+static const char drac_orange[]		= "#ffb86c";
 
 
 /* Material Palenight */
@@ -59,6 +61,9 @@ static const char *colors[SchemeLast][2] = {
 /* Dracula */
   [SchemeNorm] = { drac_fg, drac_bg3 },
   [SchemeSel] = { drac_sel2, drac_bg },
+  [SchemeNormHighlight] = { drac_orange, drac_bg3 },
+  [SchemeSelHighlight] = { drac_green, drac_bg },
+  [SchemePrompt] = { drac_fg, drac_sel3 },
 
 /* Gruvbox dark */
 // [SchemeNorm] = { gb_fg, gb_bg },
